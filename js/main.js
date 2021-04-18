@@ -157,13 +157,23 @@ if (map) {
 }
 let modalwindow = document.querySelector('.page__modal'),
     modalopen = document.querySelector('.banner__button'),
-    modalclose = document.querySelector('.icon-close');
+    modalclose = document.querySelector('.modal__close');
+
 modalopen.onclick = function() {
   modalwindow.style.display="block";
     
   };
+
+modalclose.onclick = function() {
+  modalwindow.style.display="none";
     
-    
+  };
+window.onclick = function (e) {
+    if (e.target == modalwindow) {
+        modalwindow.style.display="none";
+    }
+}
+
     
     
 
